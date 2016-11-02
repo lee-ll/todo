@@ -42,9 +42,7 @@ body {
     width: 0.41rem;
     height: 0.41rem;
     float: left;
-    margin-top: 0.4rem;
-    background: url(../img/.anydo_03.png);
-    background-size: cover; }
+    margin-top: 0.4rem; }
   .head .adv {
     width: 3.84rem;
     height: 0.85rem;
@@ -69,7 +67,7 @@ body {
     float: left;
     margin-left: 0.62rem;
     margin-top: 0.4rem;
-    background: url(../img/.anydo_07.png);
+    background: url(../img/anydo_07.png);
     background-size: cover; }
   .head .dazi {
     width: 2.75rem;
@@ -84,14 +82,14 @@ body {
     width: 0.57rem;
     height: 0.48rem;
     float: left;
-    background: url(../img/.anydo_13.png);
+    background: url(../img/anydo_13.png);
     margin-left: 2.7rem;
     margin-top: 0.65rem;
     background-size: cover; }
   .head .xuanze {
     width: 0.97rem;
     height: 0.48rem;
-    background: url(../img/.anydo_14.png);
+    background: url(../img/anydo_14.png);
     background-size: cover;
     float: right;
     margin-top: 0.65rem; }
@@ -118,7 +116,7 @@ body {
       bottom: 0;
       margin: auto;
       right: 0.52rem;
-      background: url(../img/.anydo_18.png);
+      background: url(../img/anydo_18.png);
       background-size: cover; }
   .list ul {
     width: 100%; }
