@@ -7,20 +7,21 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="todo">
-  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.jpg">
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="todo">
   <meta name="theme-color" content="#2F3BA2">
-  <link rel="icon" sizes="192x192" href="todo.png">
+  <link rel="icon" sizes="192x192" href="logo.jpg">
 
 	<title>todo</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jQuery.js"></script>
-	<!--<script src="js/index.js"></script>-->
+	<script src="js/index.js"></script>
 </head>
 <body>
+<div class="all">
  <div class="head">
  	<div class="menu">
  		<img src="./img/anydo_03.png" alt="" />
@@ -38,11 +39,19 @@
  	<div class="xuanze"></div>
  </div>
  <div class="list">
- 	<div class="tody">今天 <div></div></div>
- 	<ul >
+ 	<div class="tody">今天 
+ 		<div class="jianiu"></div>
+ 	</div>
+ 	<div class="neirong neirong1">
+ 			<input type="text" placeholder="what you want to do?"/>
+ 			<div class="add"></div>
+ 	</div>
+ 	<ul data="0">
  		<li class="done">
  			<div class="content">有些事早做好</div>
- 		    <div class="delete"></div>
+ 		    <div class="delete">
+ 		    	<img src="./img/xx_03.png" alt="" />
+ 		    </div>
  		</li>
  		<li>
  			<div class="content">有些事早做好</div>
@@ -51,19 +60,43 @@
  	</ul>
  </div>
 <div class="list">
- 	<div class="tody">明天 <div></div></div>
+ 	<div class="tody">明天
+ 		<div class="jianiu"></div>	
+ 	</div>
+ 	<div class="neirong neirong2">
+ 			<input type="text" placeholder="what you want to do?"/>
+ 			<div class="add"></div>
+ 		</div>
+ 	<ul data="1">
+ 	</ul>
  </div>
  <div class="list">
- 	<div class="tody">即将<div></div></div>
- 	
+ 	<div class="tody">即将
+ 		<div class="jianiu"></div>
+ 	</div>
+ 	<div class="neirong neirong3">
+ 			<input type="text" placeholder="what you want to do?"/>
+ 			<div class="add"></div>
+ 		</div>
+ 	<ul data="2">
+ 	</ul>
  </div>
  <div class="list">
- 	<div class="tody">以后再说<div></div></div>
- 
+ 	<div class="tody">以后再说
+ 		<div class="jianiu"></div>
+ 	</div>
+ 	<div class="neirong  neirong4">
+ 			<input type="text" placeholder="what you want to do?"/>
+ 			<div class="add"></div>
+ 		</div>
+ 	<ul data="3">
+ 	</ul>
+ </div>
  </div>
  <div class="jia"></div>
 <!-- 主页-->
-<!--<div class="toubu">
+<div class="zhuye"> 
+<div class="toubu">
 	<div class="hai">嗨</div>
 	<div class="sandian"></div>
 	<div class="mes"></div>
@@ -91,6 +124,7 @@
 	<li class="none"></li>
 	<li></li>
 	<li class="none"></li>
-</ul>-->
+</ul>
+</div>
 </body>
 </html>

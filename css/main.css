@@ -32,6 +32,10 @@ body {
   box-sizing: border-box;
   font-family: "微软雅黑"; }
 
+.all {
+  width: 100%;
+  height: 14rem; }
+
 .head {
   width: 100%;
   height: 2.52rem;
@@ -43,6 +47,9 @@ body {
     height: 0.41rem;
     float: left;
     margin-top: 0.4rem; }
+    .head .menu img {
+      width: 0.41rem;
+      height: 0.41rem; }
   .head .adv {
     width: 3.84rem;
     height: 0.85rem;
@@ -107,7 +114,7 @@ body {
     font-size: 0.3rem;
     position: relative;
     font-weight: bold; }
-    .list .tody div {
+    .list .tody .jianiu {
       width: 0.23rem;
       height: 0.3rem;
       position: absolute;
@@ -118,6 +125,32 @@ body {
       right: 0.52rem;
       background: url(../img/anydo_18.png);
       background-size: cover; }
+  .list .neirong {
+    width: 100%;
+    height: 14rem;
+    background: #fff;
+    border-bottom: 1px silid #E4E4E4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none; }
+    .list .neirong input {
+      width: 90%;
+      min-height: 1.5rem;
+      padding-left: 0.35rem;
+      padding-right: 0.35rem;
+      border-bottom: 1px solid #E4E4E4;
+      outline: none;
+      float: left; }
+    .list .neirong .add {
+      width: 0.6rem;
+      height: 0.6rem;
+      background: url(../img/jia_03.png);
+      background-size: cover;
+      float: left;
+      margin-top: 0.5rem;
+      margin-left: 0.1rem; }
   .list ul {
     width: 100%; }
     .list ul li {
@@ -136,8 +169,6 @@ body {
       .list ul li .delete {
         width: 0.3rem;
         height: 0.3rem;
-        background: url(../img/xx_03.png);
-        background-size: cover;
         position: absolute;
         position: absolute;
         top: 0;
@@ -145,6 +176,8 @@ body {
         margin: auto;
         right: 0.52rem;
         display: none; }
+        .list ul li .delete img {
+          width: 0.3rem; }
     .list ul li.done .content {
       color: #909090;
       text-decoration: line-through; }
@@ -158,7 +191,17 @@ body {
   background-size: cover;
   position: fixed;
   right: .4rem;
-  bottom: .38rem; }
+  bottom: .38rem;
+  z-index: 5; }
+
+.zhuye {
+  width: 100%;
+  height: 14rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  background: #fff; }
 
 .toubu {
   width: 100%;
@@ -240,3 +283,27 @@ body {
     line-height: 2.9rem;
     color: #0098CC;
     padding-top: 0; }
+
+#yiru {
+  transition: .6s all ease;
+  animation: yiru 0.6s forwards; }
+
+#yichu {
+  transition: .6s all ease;
+  animation: yichu 0.6s forwards; }
+
+@keyframes yiru {
+  from {
+    transform: scale(1.4);
+    visibility: hidden; }
+  to {
+    transform: scale(1);
+    visibility: visible; } }
+
+@keyframes yichu {
+  from {
+    transform: scale(0.6);
+    visibility: hidden; }
+  to {
+    transform: scale(1);
+    visibility: visible; } }
