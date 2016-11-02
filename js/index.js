@@ -192,4 +192,18 @@ $(".zhuti li:eq(0)").on("touchend",function(){
 	$(".all").removeAttr("id");
 	$(".all").attr("id","yichu");
 })
+//主页项目更新
+var arr=[];
+arr.push($(".all li").length);
+for(var i=2;i<5;i++){
+	arr.push($(".all .list:nth-child("+i+") li").length);
+}
+$(".zhuti li").each(function(index){
+	var a=index+1;
+	if(arr[index]){
+	$(".zhuti li:nth-child("+a+") .line2").html(arr[index]+"个项目");	
+	}else{
+	$(".zhuti li:nth-child("+a+") .line2").html("没有个项目");		
+	}
+})
 })
