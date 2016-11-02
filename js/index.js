@@ -40,17 +40,17 @@ $(function(){
            }
            if(n-starpos<-50){
             	if(ul.attr("data")==0){
-         	  todos[$(this).index()].state=1;
-             $(this).addClass("done");  
+         	  todos[$(this).index()].state=0;
+             $(this).removeClass("done");  
          	 	}else if(ul.attr("data")==1){
-         	  todos1[$(this).index()].state=1;
-             $(this).addClass("done");  
+         	  todos1[$(this).index()].state=0;
+             $(this).removeClass("done");  
          	 	}else if(ul.attr("data")==2){
-         	 	 todos2[$(this).index()].state=1;
-                $(this).addClass("done");  	
+         	 	 todos2[$(this).index()].state=0;
+                $(this).removeClass("done");  	
          	 	}else if(ul.attr("data")==3){
-         	 	 todos3[$(this).index()].state=1;
-                 $(this).addClass("done");  		
+         	 	 todos3[$(this).index()].state=0;
+                 $(this).removeClass("done");  		
          	 	}
            }
              localStorage.todos=JSON.stringify(todos);
