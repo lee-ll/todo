@@ -34,7 +34,8 @@ body {
 
 .all {
   width: 100%;
-  height: 14rem; }
+  height: 13.34rem;
+  overflow: hidden; }
 
 .head {
   width: 100%;
@@ -76,6 +77,38 @@ body {
     margin-top: 0.4rem;
     background: url(../img/anydo_07.png);
     background-size: cover; }
+    .head .shuniu .shu-box {
+      width: 5.28rem;
+      height: 7.47rem;
+      position: absolute;
+      right: 0.25rem;
+      top: 0.15rem;
+      box-shadow: 1px 1px 3px #ebebeb;
+      z-index: 20;
+      padding-left: 0.5rem;
+      background: #fff;
+      visibility: hidden; }
+      .head .shuniu .shu-box .xiao-box {
+        width: 100%;
+        height: 16.67%;
+        font-size: 0.4rem;
+        padding-left: 0.94rem;
+        line-height: 1.245rem;
+        text-align: left;
+        position: relative; }
+        .head .shuniu .shu-box .xiao-box img {
+          width: 0.52rem;
+          height: 0.52rem;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          left: 0rem; }
+      .head .shuniu .shu-box .xiao-box:nth-child(5) {
+        color: #0099cc; }
+      .head .shuniu .shu-box .xiao-box:nth-child(6) {
+        font-size: 0.3rem;
+        color: #b1b1b1; }
   .head .dazi {
     width: 2.75rem;
     height: 0.7rem;
@@ -129,20 +162,20 @@ body {
     width: 100%;
     height: 14rem;
     background: #fff;
-    border-bottom: 1px silid #E4E4E4;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
     display: none; }
     .list .neirong input {
-      width: 90%;
+      width: 85%;
       min-height: 1.5rem;
       padding-left: 0.35rem;
       padding-right: 0.35rem;
-      border-bottom: 1px solid #E4E4E4;
-      outline: none;
-      float: left; }
+      outline-style: none;
+      float: left;
+      border: none;
+      border-bottom: 1px solid #E4E4E4; }
     .list .neirong .add {
       width: 0.6rem;
       height: 0.6rem;
@@ -196,12 +229,13 @@ body {
 
 .zhuye {
   width: 100%;
-  height: 14rem;
+  height: 13.34rem;
   position: absolute;
   left: 0;
   top: 0;
   visibility: hidden;
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
 
 .toubu {
   width: 100%;
@@ -292,11 +326,16 @@ body {
   transition: .6s all ease;
   animation: yichu 0.6s forwards; }
 
+#chuxian {
+  transition: .6s all ease;
+  animation: chuxian 0.6s forwards; }
+
 @keyframes yiru {
-  from {
-    transform: scale(1.4);
+  0% {
+    transform-origin: center;
+    transform: scale(0.8);
     visibility: hidden; }
-  to {
+  100% {
     transform: scale(1);
     visibility: visible; } }
 
@@ -307,3 +346,62 @@ body {
   to {
     transform: scale(1);
     visibility: visible; } }
+
+@keyframes chuxian {
+  from {
+    visibility: hidden;
+    transform: scale(0); }
+  to {
+    visibility: visible;
+    transform: scale(1); } }
+
+.selection {
+  width: 100%;
+  height: 13.3rem;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0.8; }
+  .selection ul {
+    width: 100%; }
+    .selection ul li {
+      width: 100%;
+      height: 1.38rem;
+      border-bottom: 1px solid #ededed;
+      padding-left: 0.46rem;
+      position: relative; }
+      .selection ul li img {
+        width: 0.6rem;
+        height: 0.6rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+      .selection ul li .zi {
+        height: 100%;
+        text-align: left;
+        line-height: 1.38rem;
+        font-size: 0.33rem;
+        margin-left: 1rem; }
+      .selection ul li .tiao {
+        width: 0.1rem;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #0099cc;
+        display: none; }
+
+@keyframes xialai {
+  from {
+    visibility: hidden;
+    transform: translateY(-4.14rem); }
+  to {
+    visibility: visible;
+    transform: translateY(0); } }
+
+#xialai {
+  transition: 0.6s all ease;
+  animation: xialai .6s forwards; }

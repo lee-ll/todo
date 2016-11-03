@@ -15,6 +15,10 @@ $(function(){
     	neirong.show();
  
     })
+     $(".jia").on("touchend",function(){
+    	$(".neirong1").show();
+ 
+    })
      ul.on('touchstart','li',function(e){
          	// 获取开始触摸的位置
            starpos=e.originalEvent.changedTouches[0].clientX;
@@ -144,29 +148,51 @@ add.on('touchstart',function(){
 	}
          	 	}  
  }
+ 
+  var clearall=$(".xiao-box:eq(0)");
+   clearall.on("touchstart",function(){
+   	ul.find(".done").each(function(i){
+    $(this).delay(i*80).queue(function(){
+    	$(this).addClass("dong").dequeue();
+    }).delay(800).queue(function(){
+    	$(this).remove().dequeue(); 
+    })
+})
+   	var arr=[];arr1=[];arr2=[];arr3=[];
+   	for(var i in todos){
+   		if(todos[i].state==0){
+   			arr.push(todos[i])
+   		}
+   	}
+   		for(var i in todos1){
+   		if(todos1[i].state==0){
+   			arr1.push(todos1[i])
+   		}
+   	}
+   			for(var i in todos2){
+   		if(todos2[i].state==0){
+   			arr2.push(todos2[i])
+   		}
+   	}
+   				for(var i in todos3){
+   		if(todos3[i].state==0){
+   			arr3.push(todos3[i])
+   		}
+   	}
+   	todos=arr;
+   	todos1=arr1;
+   	todos2=arr2;
+   	todos3=arr3;
+    localStorage.todos=JSON.stringify(todos);
+    localStorage.todos1=JSON.stringify(todos1);
+    localStorage.todos2=JSON.stringify(todos2);
+    localStorage.todos3=JSON.stringify(todos3);
+   })
 }
-addlist($(".list").eq(0));
-addlist($(".list").eq(1));	
-addlist($(".list").eq(2));
-addlist($(".list").eq(3));	
-// var clearall=$(".clearall");
-// clearall.on("touchstart",function(){
-// 	ul.find(".done").each(function(i){
-//  $(this).delay(i*80).queue(function(){
-//  	$(this).addClass("dong").dequeue();
-//  }).delay(800).queue(function(){
-//  	$(this).remove().dequeue(); 
-//  })
-//})
-// 	var arr=[];
-// 	for(var i in todos){
-// 		if(todos[i].state==0){
-// 			arr.push(todos[i])
-// 		}
-// 	}
-// 	todos=arr;
-//  localStorage.todos=JSON.stringify(todos);
-// })
+$(".list").each(function(index){
+	 addlist($(".list").eq(index));	
+})
+  
 // $(".box div").on("touchstart",function(){
 // 	$(".box div").removeClass();
 // 	$(this).addClass("active");
@@ -180,16 +206,16 @@ addlist($(".list").eq(3));
 // })
 //主页出现
 $(".menu").on("touchend",function(){
+	$(".zhuye").show();
 	$(".zhuye").removeAttr("id");
 	$(".all").removeAttr("id");
-	$(".zhuye").show();
 	$(".zhuye").attr("id","yiru");                                                         
 })
 //主页切换所有任务
 $(".zhuti li:eq(0)").on("touchend",function(){
 	$(".zhuye").hide();
-	$(".zhuye").removeAttr("id");
 	$(".all").removeAttr("id");
+	$(".zhuye").removeAttr("id");
 	$(".all").attr("id","yichu");
 })
 //主页项目更新
@@ -205,5 +231,32 @@ $(".zhuti li").each(function(index){
 	}else{
 	$(".zhuti li:nth-child("+a+") .line2").html("没有个项目");		
 	}
+})
+//广告
+$(".adv").on("touchend",function(){
+	$(".adv img").css("opacity",0);
+})
+//右上角按钮
+$(".shuniu").on("touchend",function(){
+	$(".shu-box").removeAttr("id");
+	$(".shu-box").attr("id","chuxian")
+})
+$("body").on("touchend",function(event){
+	var $target = $(event.target);
+	if(($target.attr("class")!="shuniu")&&($target.attr("class")!="xiao-box")){
+		$(".shu-box").removeAttr("id");
+	}
+})
+//上下按钮
+$(".shangxia").on("touchend",function(){
+	$(".all").css("tranform","translateY(4.14rem)");
+	$(".selection").removeAttr("id");
+	$(".selection").attr("id","xialai");
+	$(".selection li:eq(0) .tiao").show();
+})
+$(".selection li").each(function(index){
+	$(this).on("touchend",function(){
+		$(".tiao").hide().eq(index).show();
+	})
 })
 })
