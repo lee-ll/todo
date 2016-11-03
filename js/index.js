@@ -259,7 +259,11 @@ $(".selection li").each(function(index){
 		$(".tiao").hide().eq(index).show();
 	})
 })
-$(".selection").on("touchend",function(){
-	$(this).hide();
+$(".selection").on("touchend",function(event){
+	var $target = $(event.target);
+	if($target.attr("class")!="zi"){
+		$(".selection").removeAttr("id");
+	}
+	
 })
 })
